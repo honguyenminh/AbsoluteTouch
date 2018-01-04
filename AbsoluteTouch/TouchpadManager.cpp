@@ -1,7 +1,10 @@
 #include "TouchpadManager.h"
 #include <cassert>
 
-#define ASSERT_OK(x) if ((x) != SYN_OK) assert(false);
+#define ASSERT_OK(x) do { \
+    if ((x) != SYN_OK)    \
+        assert(false);    \
+} while (0)
 
 TouchpadManager::TouchpadManager()
 {

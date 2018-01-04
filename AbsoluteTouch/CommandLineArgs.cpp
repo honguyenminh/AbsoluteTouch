@@ -47,25 +47,25 @@ static bool ParsePercent(const std::string &str, int *out)
     return true;
 }
 
- CommandLineArgs::CommandLineArgs(int argc, char *argv[])
- {
-     for (int i = 1; i < argc; ++i) {
-         if (std::strcmp(argv[i], "-t") == 0 && i < argc - 1) {
-             if (!ParseRect(argv[++i], &touchpadRect))
-                 return;
-         } else if (std::strcmp(argv[i], "-s") == 0 && i < argc - 1) {
-             if (!ParseRect(argv[++i], &screenRect))
-                 return;
-         } else if (std::strcmp(argv[i], "-w") == 0 && i < argc - 1) {
-             if (!ParsePercent(argv[++i], &smoothingWeight))
-                 return;
-         } else if (std::strcmp(argv[i], "-m") == 0) {
-             manageTouchpad = true;
-         } else if (std::strcmp(argv[i], "-c") == 0) {
-             sendClick = true;
-         } else {
-             return;
-         }
-     }
-     ok = true;
- }
+CommandLineArgs::CommandLineArgs(int argc, char *argv[])
+{
+    for (int i = 1; i < argc; ++i) {
+        if (std::strcmp(argv[i], "-t") == 0 && i < argc - 1) {
+            if (!ParseRect(argv[++i], &touchpadRect))
+                return;
+        } else if (std::strcmp(argv[i], "-s") == 0 && i < argc - 1) {
+            if (!ParseRect(argv[++i], &screenRect))
+                return;
+        } else if (std::strcmp(argv[i], "-w") == 0 && i < argc - 1) {
+            if (!ParsePercent(argv[++i], &smoothingWeight))
+                return;
+        } else if (std::strcmp(argv[i], "-m") == 0) {
+            manageTouchpad = true;
+        } else if (std::strcmp(argv[i], "-c") == 0) {
+            sendClick = true;
+        } else {
+            return;
+        }
+    }
+    ok = true;
+}
