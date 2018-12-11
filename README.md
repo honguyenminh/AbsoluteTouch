@@ -4,6 +4,10 @@ Synaptics "absolute mode" emulation in software. Ever wanted to use
 your laptop touchpad to play osu!, or to draw your signature? Well,
 now you can!
 
+This project is now deprecated in favor of the new
+[AbsoluteTouchEx](https://github.com/apsun/AbsoluteTouchEx) project,
+which is compatible with more touchpads and faster.
+
 ## Requirements
 
 - A Synaptics touchpad
